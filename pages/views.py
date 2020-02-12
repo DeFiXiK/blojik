@@ -58,9 +58,6 @@ class CommentCreationAjaxView(generic.View):
 
 
 class VoteAjaxView(generic.View):
-    def vote_create(self, request, form):
-        pass
-
     def post(self, request):
         form = VoteForm(request.POST)
         if not form.is_valid():
